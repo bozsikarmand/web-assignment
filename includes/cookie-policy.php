@@ -31,8 +31,8 @@
     <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
 
-    <link rel='stylesheet' href='assets/css/style.css' type='text/css' media='screen'/>
-    <link rel='stylesheet' href='assets/fonts/fontawesome/css/all.min.css' type='text/css' media='screen'/>
+    <link rel='stylesheet' href='../assets/css/style.css' type='text/css' media='screen'/>
+    <link rel='stylesheet' href='../assets/fonts/fontawesome/css/all.min.css' type='text/css' media='screen'/>
 
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
@@ -41,24 +41,24 @@
 <div class="sp-landing">
     <div class="image">
         <picture>
-            <source srcset="assets/images/cookie-policy/cookie-policy.webp" type="image/webp">
-            <source srcset="assets/images/cookie-policy/cookie-policy.png" type="image/png">
-            <img src="assets/images/cookie-policy/cookie-policy.png" alt="Section symbol">
+            <source srcset="../assets/images/cookie-policy/cookie-policy.webp" type="image/webp">
+            <source srcset="../assets/images/cookie-policy/cookie-policy.png" type="image/png">
+            <img src="../assets/images/cookie-policy/cookie-policy.png" alt="Section symbol">
         </picture>
     </div>
-    <div class="content">
+    <div class="content" style="overflow: auto;">
         <div class="center">
 		    <nav class="navigation-links">
                 <div class="navigation-link">
                     <ul>
                         <li>
-                            <a href="index.php">
+                            <a href="../index.php">
                                 <i class="fas fa-home"></i> Home
                             </a>
-                            <a href="portfolio.php">
+                            <a href="../portfolio.php">
                                 <i class="fas fa-briefcase"></i> Portfolio
                             </a>
-                            <a href="includes/login.php" class="login-button-header">
+                            <a href="login.php" class="login-button-header">
                                 <i class="fas fa-user"></i> Log in
                             </a>
                         </li>

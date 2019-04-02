@@ -157,10 +157,10 @@
                 <div class="footer-link">
                     <ul>
                         <li>
-                            <a href="../../WebAssignment/privacy-policy.php">
+                            <a href="privacy-policy.php">
                                 <i class="fas fa-user-secret"></i> Privacy Policy
                             </a>
-                            <a href="../../WebAssignment/cookie-policy.php">
+                            <a href="cookie-policy.php">
                                 <i class="fas fa-cookie-bite"></i> Cookie Policy
                             </a>
                         </li>

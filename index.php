@@ -62,6 +62,9 @@
                                     <a href="includes/login.php" class="login-button-header">
                                         <i class="fas fa-user"></i> Log in
                                     </a>
+                                    <a href="includes/contact.php">
+                                        <i class="fas fa-envelope"></i> Contact me
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -149,10 +152,10 @@
                         <div class="footer-link">
                             <ul>
                                 <li>
-                                    <a href="privacy-policy.php">
+                                    <a href="includes/privacy-policy.php">
                                         <i class="fas fa-user-secret"></i> Privacy Policy
                                     </a>
-                                    <a href="cookie-policy.php">
+                                    <a href="includes/cookie-policy.php">
                                         <i class="fas fa-cookie-bite"></i> Cookie Policy
                                     </a>
                                 </li>

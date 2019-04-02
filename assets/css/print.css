@@ -1,0 +1,11 @@
+@media print {
+    .not-to-print
+    {
+        display: none;
+    }
+    .print {
+        display: block;
+        color: #000000;
+        background-color: #FFFFFF;
+    }
+}

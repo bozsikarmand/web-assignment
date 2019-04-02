@@ -24,6 +24,7 @@
     <meta name="twitter:creator" content="@bozsikarmand"/>
 
     <!-- Favicon -->
+
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -31,8 +32,8 @@
     <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
 
-    <link rel='stylesheet' href='assets/css/style.css' type='text/css' media='screen'/>
-    <link rel='stylesheet' href='assets/fonts/fontawesome/css/all.min.css' type='text/css' media='screen'/>
+    <link rel='stylesheet' href='../assets/css/style.css' type='text/css' media='screen'/>
+    <link rel='stylesheet' href='../assets/fonts/fontawesome/css/all.min.css' type='text/css' media='screen'/>
 
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
@@ -41,25 +42,28 @@
 <div class="sp-landing">
     <div class="image">
         <picture>
-            <source srcset="assets/images/privacy-policy/privacy-policy.webp" type="image/webp">
-            <source srcset="assets/images/privacy-policy/privacy-policy.png" type="image/png">
-            <img src="assets/images/privacy-policy/privacy-policy.png" alt="Section symbol">
+            <source srcset="../assets/images/main/main.webp" type="image/webp">
+            <source srcset="../assets/images/main/main.png" type="image/png">
+            <img src="../assets/images/main/main.png" alt="My profile picture">
         </picture>
     </div>
-    <div class="content">
+    <div class="content" style="overflow: auto;">
         <div class="center">
             <nav class="navigation-links">
                 <div class="navigation-link">
                     <ul>
                         <li>
-                            <a href="index.php">
+                            <a href="../index.php" class="actual">
                                 <i class="fas fa-home"></i> Home
                             </a>
-                            <a href="portfolio.php">
+                            <a href="../portfolio.php">
                                 <i class="fas fa-briefcase"></i> Portfolio
                             </a>
-                            <a href="includes/login.php" class="login-button-header">
+                            <a href="../includes/login.php" class="login-button-header">
                                 <i class="fas fa-user"></i> Log in
+                            </a>
+                            <a href="../includes/contact.php">
+                                <i class="fas fa-envelope"></i> Contact me
                             </a>
                         </li>
                     </ul>
@@ -67,46 +71,37 @@
             </nav>
             <div class="introduction">
                 <h1>Hello, my name is Armand Bozsik</h1>
-                <span class="privacy-policy">Privacy Policy</span>
+                <span class="self-identification">Get in touch!</span>
             </div>
-            <div class="privacy-policy-text">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nisl tempor mi cursus elementum vitae non libero. Nam iaculis
-                    porta scelerisque. Vestibulum luctus varius ipsum tempor ultrices. Fusce ac orci hendrerit, ullamcorper elit euismod, vulputate elit.
-                    Nulla eu metus enim. Suspendisse mollis dui non viverra rhoncus. Nunc in neque nec est lacinia eleifend. Etiam aliquam ornare nulla,
-                    eu pretium nibh facilisis quis. Nullam aliquet, mauris eget rhoncus finibus, purus dolor gravida tellus, vel vestibulum erat arcu sit
-                    amet quam. Aliquam finibus tempus orci ut cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                    Curae; Nunc vel tempor ex, at auctor nunc. Aenean libero lorem, aliquam sit amet orci ut, convallis pulvinar tortor.
-                </p>
-                <p>
-                    Curabitur varius iaculis lectus eu tempor. Morbi a tellus sit amet est congue egestas. Sed dolor sem, fringilla eu justo viverra,
-                    scelerisque gravida tortor. Sed ut purus vitae leo auctor tempor sed ut elit. Ut gravida eget enim eu scelerisque. Ut bibendum
-                    auctor faucibus. Donec faucibus nibh neque, maximus egestas purus mollis vitae. Vestibulum vel feugiat purus. Fusce a dolor dolor.
-                </p>
-                <p>
-                    Fusce mollis, arcu quis euismod fermentum, turpis mauris tempor tellus, non hendrerit lectus urna et leo. Morbi tempor metus massa,
-                    ut venenatis risus sollicitudin eget. Suspendisse potenti. Suspendisse condimentum dignissim ipsum, sit amet porttitor sapien pulvinar
-                    ut. Fusce vel tempor libero, ut porta orci. Donec ornare leo massa, id ornare magna dignissim vel. Proin orci sapien, auctor eget nibh
-                    eu, pulvinar fringilla elit. Nullam tristique sed elit id hendrerit. Cras imperdiet eu nulla eget tempus. Donec sed velit dui.
-                </p>
-                <p>
-                    Donec elementum sapien vel risus dignissim cursus. Proin aliquam mi sit amet ligula condimentum bibendum. Nam id risus porta, ultrices
-                    quam non, ornare nisl. Phasellus eleifend tellus turpis, sed cursus quam faucibus a. Ut id congue dolor. Vivamus gravida augue vel nibh
-                    scelerisque, ut sodales mauris viverra. Vivamus consectetur nulla quis elit elementum, eu consectetur ex porttitor. Morbi ac orci purus.
-                    Duis pretium, urna in ullamcorper rutrum, diam lectus aliquam nisl, vitae lacinia eros sem ut urna. Proin maximus, enim vel lobortis ultrices,
-                    lectus diam tincidunt purus, ac convallis justo velit ut ante.
-                </p>
-                <p>
-                    Aliquam risus urna, luctus eu rhoncus vitae, suscipit nec nibh. Ut hendrerit, est consectetur dapibus maximus, ipsum lacus sodales massa, et
-                    fringilla nibh erat eget purus. Sed condimentum semper lacus, sit amet pharetra augue. Aliquam sollicitudin in lectus sit amet placerat. Fusce
-                    sed purus mi. Fusce eget orci at lacus blandit convallis a eu augue. Proin at nulla lorem. Ut posuere, lectus eget condimentum hendrerit, mi
-                    ante maximus mauris, molestie bibendum mauris arcu nec eros. Nulla posuere tempor augue a blandit. Donec porttitor magna et lacinia volutpat.
-                    Maecenas accumsan tellus eget diam aliquet, non elementum enim convallis. Praesent porta in sem nec venenatis. Nam gravida egestas rhoncus.
-                    Pellentesque risus eros, eleifend dapibus urna quis, mattis imperdiet neque. Praesent eu congue sem.
-                </p>
-                <button class="button-privacy-policy-print">
-                    <i class="fas fa-print"></i> Print this page
-                </button>
+            <div class="contact">
+                <form action="../logic/contact.php" class="form-contact">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email">
+                    <label for="tel">Telephone:</label>
+                    <input type="tel" id="tel">
+                    <label class="text-form-contact">Entity:</label>
+                    <label>Topics</label>
+                    <input list="topics" name="topics" title="Topics">
+                    <datalist id="topics">
+                        <option value="General Inquiry"></option>
+                        <option value="Problem with account"></option>
+                        <option value="Error report"></option>
+                    </datalist>
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message"></textarea>
+                    <br>
+                    <label for="file">Upload file:</label>
+                    <input type="file" name="file" id="file">
+                    <label for="tos">Please agree ToS by ticking the box below!</label>
+                    <div class="container-tos">
+                        <input type="checkbox" name="tos" id="tos">
+                    </div>
+                    <button class="button-contact-submit">
+                        <i class="fa fa-arrow-alt-circle-right"></i> Submit
+                    </button>
+                </form>
             </div>
             <div class="social-media-profiles">
                 <div class="social-media-profile">
