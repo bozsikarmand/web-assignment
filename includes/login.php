@@ -72,7 +72,7 @@
                 <span class="self-identification">Access private area</span>
             </div>
             <div class="biography">
-                <form action="../../WebAssignment/logic/login.php" class="form-login">
+                <form action="../../WebAssignment/logic/login.php" method="post" class="form-login">
                     <input name="form-login-username" placeholder="Username" required="required" type="text" />
                     <input name="form-login-password" placeholder="Password" required="required" type="password" />
                     <button name="form-login-button" class="form-login-button">Log in</button>

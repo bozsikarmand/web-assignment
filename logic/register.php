@@ -55,7 +55,7 @@ if (
 
     if ($password === $passwordRepeat)
     {
-        $savedRecord = $userName . "," . $password . "," . $EMail . "," . $role;
+        $savedRecord = $userName . "," . $password . "," . $EMail . "," . $role . "\r\n";
         fwrite($flatDB, $savedRecord);
         fclose($flatDB);
     }

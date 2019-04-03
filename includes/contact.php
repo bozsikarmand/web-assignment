@@ -74,15 +74,14 @@
                 <span class="self-identification">Get in touch!</span>
             </div>
             <div class="contact">
-                <form action="../logic/contact.php" class="form-contact">
+                <form action="../logic/contact.php" class="form-contact" method="post" enctype="multipart/form-data">
                     <label for="name">Name:</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" name="form-contact-name">
                     <label for="email">Email address:</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" name="form-contact-email">
                     <label for="tel">Telephone:</label>
-                    <input type="tel" id="tel">
-                    <label class="text-form-contact">Entity:</label>
-                    <label>Topics</label>
+                    <input type="tel" id="tel" name="form-contact-tel">
+                    <label for="topics">Topics</label>
                     <input list="topics" name="topics" title="Topics">
                     <datalist id="topics">
                         <option value="General Inquiry"></option>
@@ -90,15 +89,15 @@
                         <option value="Error report"></option>
                     </datalist>
                     <label for="message">Message:</label>
-                    <textarea name="message" id="message"></textarea>
+                    <textarea name="form-contact-message" id="message"></textarea>
                     <br>
                     <label for="file">Upload file:</label>
-                    <input type="file" name="file" id="file">
+                    <input type="file" name="form-contact-file-upload" id="file">
                     <label for="tos">Please agree ToS by ticking the box below!</label>
                     <div class="container-tos">
-                        <input type="checkbox" name="tos" id="tos">
+                        <input type="checkbox" name="form-contact-tos" id="tos">
                     </div>
-                    <button class="button-contact-submit">
+                    <button class="button-contact-submit" name="form-contact-submit">
                         <i class="fa fa-arrow-alt-circle-right"></i> Submit
                     </button>
                 </form>
