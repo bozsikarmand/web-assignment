@@ -165,7 +165,11 @@
                     <div class="copyright">
                         <p class="copyright-year">
                             &copy;
-                            <?php echo date('Y'); ?>
+                            <?php
+
+                            require_once("includes/misc/currentYear.php");
+
+                            echo currentYear() ?>
                             Armand Bozsik
                         </p>
                     </div>

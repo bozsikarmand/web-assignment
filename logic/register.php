@@ -6,6 +6,14 @@
  * Time: 07:26 PM
  */
 
+session_start();
+/*
+    Error page relative path
+    Success page relative path
+*/
+$errorPageRelativePath = "Location: ../includes/error.php";
+$successPageRelativePath = "Location: ../includes/success.php";
+
 if (
     isset($_POST["form-register-username"]) &&
     isset($_POST["form-register-password"]) &&
@@ -20,48 +28,81 @@ if (
     $EMail = $_POST["form-register-email"];
     $role = $_POST["form-register-role"];
 
-    $flatDB = fopen("../storage/db.armand","a");
+    $record = $userName . "," . $password . "," . $EMail . "," . $role . PHP_EOL;
 
-    $isPasswordSame = false;
-    $isUserFound = false;
-    $isPasswordSameInDB = false;
-    $isEMailSameInDB = false;
+    $flatDB = '../storage/db.armand';
 
-    /*while (!feof($flatDB))
-    {
-        $currentUserRecord = fgets($flatDB);
-        $currentUserRecordSplit = explode(",",$currentUserRecord);
+    // Flag-ek
+    $isUserExisting = false;
+    $isUserNameTaken = false;
+    $isPasswordTaken = false;
+    $passwordNotMatch = false;
+    $isEmailTaken = false;
+    $isRegisterSuccessful = false;
+    /* Session parameterek */
+    $_SESSION["SessionIsUserExisting"] = false;
+    $_SESSION["SessionIsUserNameTaken"] = false;
+    $_SESSION["SessionIsPasswordTaken"] = false;
+    $_SESSION["SessionPasswordNotMatch"] = false;
+    $_SESSION["SessionIsEmailTaken"] = false;
+    $_SESSION["SessionIsRegisterSuccessful"] = false;
 
-        if (trim($currentUserRecordSplit[0]) == $userName)
-        {
-            // User with same username is present!
-            $isUserFound = true;
-            break;
-        }
-        if (trim($currentUserRecordSplit[1]) == $password)
-        {
-            // User with same password is present! Choose another!
-            $isPasswordSameInDB = true;
-            break;
-        }
-        if (trim($currentUserRecordSplit[3]) == $EMail)
-        {
-            // User with same email address is present! Choose another!
-            $isEMailSameInDB = true;
-            break;
-        }
+
+    if ($password != $passwordRepeat) {
+        $passwordNotMatch = true;
+        $_SESSION["SessionPasswordNotMatch"] = true;
+        header($errorPageRelativePath);
     }
-    fclose($flatDB);*/
 
-    if ($password === $passwordRepeat)
-    {
-        $savedRecord = $userName . "," . $password . "," . $EMail . "," . $role . "\r\n";
-        fwrite($flatDB, $savedRecord);
-        fclose($flatDB);
+    if (!file_exists($flatDB)) {
+        $handler = fopen($flatDB,'c');
+        fclose($handler);
     }
-    else
-    {
-        $isPasswordSame = true;
+    if (file_exists($flatDB)) {
+        if (filesize($flatDB) == 0) {
+            $handler = fopen($flatDB,'a');
+            fwrite($handler, $record);
+            fclose($handler);
+            $isRegisterSuccessful = true;
+            $_SESSION["SessionIsRegisterSuccessful"] = true;
+            header($successPageRelativePath);
+        } else {
+            $ArrayFromFile = file($flatDB);
+
+            foreach ($ArrayFromFile as $user) {
+                $userRecordArray = explode(',', $user);
+
+                // User letezik-e az adatbazisban
+                if ($userRecordArray[0] == $userName) {
+                    $isUserNameTaken = true;
+                    $isUserExisting = true;
+                    $_SESSION["SessionIsUserNameTaken"] = true;
+                    $_SESSION["SessionIsUserExisting"] = true;
+                    header($errorPageRelativePath);
+                }
+                if ($userRecordArray[1] == $password) {
+                    $isPasswordTaken = true;
+                    $_SESSION["SessionIsPasswordTaken"] = true;
+                    header($errorPageRelativePath);
+                }
+                if ($userRecordArray[2] == $EMail) {
+                    $isEmailTaken = true;
+                    $_SESSION["SessionIsEmailTaken"] = true;
+                    header($errorPageRelativePath);
+                }
+            }
+            if ($_SESSION["SessionIsUserExisting"] == false &&
+                $_SESSION["SessionIsUserNameTaken"] == false &&
+                $_SESSION["SessionIsPasswordTaken"] == false &&
+                $_SESSION["SessionIsEmailTaken"] == false) {
+                $handler = fopen($flatDB,'a');
+                fwrite($handler, $record);
+                fclose($handler);
+                $isRegisterSuccessful = true;
+                $_SESSION["SessionIsRegisterSuccessful"] = true;
+                header($successPageRelativePath);
+            }
+        }
     }
 }
 else {
@@ -70,4 +111,7 @@ else {
     $passwordRepeat = "";
     $EMail = "";
     $role = "";
+    $isRegisterSuccessful = false;
+    $_SESSION["SessionIsRegisterSuccessful"] = false;
+    header($errorPageRelativePath);
 }

@@ -25,11 +25,11 @@
 
     <!-- Favicon -->
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-    <link rel="manifest" href="/assets/icons/site.webmanifest">
-    <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/icons/site.webmanifest">
+    <link rel="mask-icon" href="../assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
 
     <link rel='stylesheet' href='../assets/css/style.css' type='text/css' media='screen'/>
@@ -53,7 +53,7 @@
                 <div class="navigation-link">
                     <ul>
                         <li>
-                            <a href="../index.php" class="actual">
+                            <a href="../index.php">
                                 <i class="fas fa-home"></i> Home
                             </a>
                             <a href="../portfolio.php">
@@ -62,7 +62,7 @@
                             <a href="../includes/login.php" class="login-button-header">
                                 <i class="fas fa-user"></i> Log in
                             </a>
-                            <a href="../includes/contact.php">
+                            <a href="../includes/contact.php" class="actual">
                                 <i class="fas fa-envelope"></i> Contact me
                             </a>
                         </li>
@@ -76,26 +76,28 @@
             <div class="contact">
                 <form action="../logic/contact.php" class="form-contact" method="post" enctype="multipart/form-data">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="form-contact-name">
+                    <input type="text" id="name" name="form-contact-name" required>
                     <label for="email">Email address:</label>
-                    <input type="email" id="email" name="form-contact-email">
+                    <input type="email" id="email" name="form-contact-email" required>
                     <label for="tel">Telephone:</label>
                     <input type="tel" id="tel" name="form-contact-tel">
                     <label for="topics">Topics</label>
-                    <input list="topics" name="topics" title="Topics">
-                    <datalist id="topics">
-                        <option value="General Inquiry"></option>
-                        <option value="Problem with account"></option>
-                        <option value="Error report"></option>
-                    </datalist>
+                    <select title="Available topics:" required name="form-contact-topics" size="1" id="topics">
+                        <option value="" disabled></option>
+                        <optgroup label="Please choose from the topics below:" class="form-contact-topic-available">
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Problem with account">Problem with account</option>
+                            <option value="Error report">Error report</option>
+                        </optgroup>
+                    </select>
                     <label for="message">Message:</label>
-                    <textarea name="form-contact-message" id="message"></textarea>
+                    <textarea name="form-contact-message" id="message" required></textarea>
                     <br>
                     <label for="file">Upload file:</label>
                     <input type="file" name="form-contact-file-upload" id="file">
                     <label for="tos">Please agree ToS by ticking the box below!</label>
                     <div class="container-tos">
-                        <input type="checkbox" name="form-contact-tos" id="tos">
+                        <input type="checkbox" name="form-contact-tos" id="tos" required>
                     </div>
                     <button class="button-contact-submit" name="form-contact-submit">
                         <i class="fa fa-arrow-alt-circle-right"></i> Submit
@@ -181,7 +183,11 @@
             <div class="copyright">
                 <p class="copyright-year">
                     &copy;
-                    <?php echo date('Y'); ?>
+                    <?php
+
+                    require_once("misc/currentYear.php");
+
+                    echo currentYear() ?>
                     Armand Bozsik
                 </p>
             </div>

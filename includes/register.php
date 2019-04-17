@@ -24,15 +24,15 @@
     <meta name="twitter:creator" content="@bozsikarmand"/>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-    <link rel="manifest" href="/assets/icons/site.webmanifest">
-    <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/icons/site.webmanifest">
+    <link rel="mask-icon" href="../assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
 
-    <link rel='stylesheet' href='../../WebAssignment/assets/css/style.css' type='text/css' media='screen'/>
-    <link rel='stylesheet' href='../../WebAssignment/assets/fonts/fontawesome/css/all.min.css' type='text/css' media='screen'/>
+    <link rel='stylesheet' href='../assets/css/style.css' type='text/css' media='screen'/>
+    <link rel='stylesheet' href='../assets/fonts/fontawesome/css/all.min.css' type='text/css' media='screen'/>
 
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
@@ -41,9 +41,9 @@
 <div class="sp-landing">
     <div class="image">
         <picture>
-            <source srcset="../../WebAssignment/assets/images/main/main.webp" type="image/webp">
-            <source srcset="../../WebAssignment/assets/images/main/main.png" type="image/png">
-            <img src="../../WebAssignment/assets/images/main/main.png" alt="My profile picture">
+            <source srcset="../assets/images/main/main.webp" type="image/webp">
+            <source srcset="../assets/images/main/main.png" type="image/png">
+            <img src="../assets/images/main/main.png" alt="My profile picture">
         </picture>
     </div>
 
@@ -54,10 +54,10 @@
                 <div class="navigation-link">
                     <ul>
                         <li>
-                            <a href="../../WebAssignment/index.php">
+                            <a href="../index.php">
                                 <i class="fas fa-home"></i> Home
                             </a>
-                            <a href="../../WebAssignment/portfolio.php">
+                            <a href="../portfolio.php">
                                 <i class="fas fa-briefcase"></i> Portfolio
                             </a>
                             <a href="login.php" class="login-button-header">
@@ -72,7 +72,7 @@
                 <span class="self-identification">Join now</span>
             </div>
             <div class="biography">
-                <form action="../../WebAssignment/logic/register.php" class="form-register" method="post">
+                <form action="../logic/register.php" class="form-register" method="post">
                     <input name="form-register-username" placeholder="Username" required="required" type="text" />
                     <input name="form-register-password" placeholder="Password" required="required" type="password" />
                     <input name="form-register-password-repeat" placeholder="Repeat password" required="required" type="password" />
@@ -85,9 +85,11 @@
                             <option value="admin">Admin</option>
                         </optgroup>
                     </select>
-                    <button name="form-register-button" class="form-register-button">Register</button>
+                    <button name="form-register-button" class="form-register-button">
+                        <i class="fas fa-key"></i> Register
+                    </button>
                     <span class="message-login">Already registered?
-                        <a href="../../WebAssignment/includes/login.php">Log in!</a>
+                        <a href="../includes/login.php">Log in!</a>
                     </span>
                 </form>
             </div>
@@ -170,8 +172,11 @@
             <div class="copyright">
                 <p class="copyright-year">
                     &copy;
-                    <?php echo date('Y') ?>
-                    Armand Bozsik
+                    <?php
+
+                    require_once("misc/currentYear.php");
+
+                    echo currentYear() ?>                    Armand Bozsik
                 </p>
             </div>
         </div>

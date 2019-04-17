@@ -24,6 +24,7 @@
     <meta name="twitter:creator" content="@bozsikarmand"/>
 
     <!-- Favicon -->
+
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
@@ -32,83 +33,99 @@
     <meta name="msapplication-TileColor" content="#da532c">
 
     <link rel='stylesheet' href='../assets/css/style.css' type='text/css' media='screen'/>
-    <link rel="stylesheet" href="../assets/css/print.css" type="text/css" media="print" />
     <link rel='stylesheet' href='../assets/fonts/fontawesome/css/all.min.css' type='text/css' media='screen'/>
 
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
 
-<body id="single-page" class="page-landing print">
-<div class="sp-landing print">
-    <div class="image not-to-print">
+<body id="single-page" class="page-landing">
+<div class="sp-landing">
+    <div class="image">
         <picture>
-            <source srcset="../assets/images/privacy-policy/privacy-policy.webp" type="image/webp">
-            <source srcset="../assets/images/privacy-policy/privacy-policy.png" type="image/png">
-            <img src="../assets/images/privacy-policy/privacy-policy.png" alt="Section symbol">
+            <source srcset="../assets/images/main/main.webp" type="image/webp">
+            <source srcset="../assets/images/main/main.png" type="image/png">
+            <img src="../assets/images/main/main.png" alt="My profile picture">
         </picture>
     </div>
-    <div class="content print" style="overflow: auto;">
-        <div class="center print">
-            <nav class="navigation-links not-to-print">
-                <div class="navigation-link not-to-print">
+    <div class="content" style="overflow: auto;">
+        <div class="center">
+            <nav class="navigation-links">
+                <div class="navigation-link">
                     <ul>
                         <li>
-                            <a href="../index.php">
+                            <a href="../index.php" class="actual">
                                 <i class="fas fa-home"></i> Home
                             </a>
                             <a href="../portfolio.php">
                                 <i class="fas fa-briefcase"></i> Portfolio
                             </a>
-                            <a href="login.php" class="login-button-header">
+                            <a href="../includes/login.php" class="login-button-header">
                                 <i class="fas fa-user"></i> Log in
+                            </a>
+                            <a href="../includes/contact.php">
+                                <i class="fas fa-envelope"></i> Contact me
                             </a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <div class="introduction print">
-                <h1>Privacy Policy</h1>
+            <div class="introduction">
+                <h1>You just ran into some error. Let me help!</h1>
+                <span class="self-identification">Something went wrong!</span>
             </div>
-            <div class="privacy-policy-text print">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nisl tempor mi cursus elementum vitae non libero. Nam iaculis
-                    porta scelerisque. Vestibulum luctus varius ipsum tempor ultrices. Fusce ac orci hendrerit, ullamcorper elit euismod, vulputate elit.
-                    Nulla eu metus enim. Suspendisse mollis dui non viverra rhoncus. Nunc in neque nec est lacinia eleifend. Etiam aliquam ornare nulla,
-                    eu pretium nibh facilisis quis. Nullam aliquet, mauris eget rhoncus finibus, purus dolor gravida tellus, vel vestibulum erat arcu sit
-                    amet quam. Aliquam finibus tempus orci ut cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                    Curae; Nunc vel tempor ex, at auctor nunc. Aenean libero lorem, aliquam sit amet orci ut, convallis pulvinar tortor.
-                </p>
-                <p>
-                    Curabitur varius iaculis lectus eu tempor. Morbi a tellus sit amet est congue egestas. Sed dolor sem, fringilla eu justo viverra,
-                    scelerisque gravida tortor. Sed ut purus vitae leo auctor tempor sed ut elit. Ut gravida eget enim eu scelerisque. Ut bibendum
-                    auctor faucibus. Donec faucibus nibh neque, maximus egestas purus mollis vitae. Vestibulum vel feugiat purus. Fusce a dolor dolor.
-                </p>
-                <p>
-                    Fusce mollis, arcu quis euismod fermentum, turpis mauris tempor tellus, non hendrerit lectus urna et leo. Morbi tempor metus massa,
-                    ut venenatis risus sollicitudin eget. Suspendisse potenti. Suspendisse condimentum dignissim ipsum, sit amet porttitor sapien pulvinar
-                    ut. Fusce vel tempor libero, ut porta orci. Donec ornare leo massa, id ornare magna dignissim vel. Proin orci sapien, auctor eget nibh
-                    eu, pulvinar fringilla elit. Nullam tristique sed elit id hendrerit. Cras imperdiet eu nulla eget tempus. Donec sed velit dui.
-                </p>
-                <p>
-                    Donec elementum sapien vel risus dignissim cursus. Proin aliquam mi sit amet ligula condimentum bibendum. Nam id risus porta, ultrices
-                    quam non, ornare nisl. Phasellus eleifend tellus turpis, sed cursus quam faucibus a. Ut id congue dolor. Vivamus gravida augue vel nibh
-                    scelerisque, ut sodales mauris viverra. Vivamus consectetur nulla quis elit elementum, eu consectetur ex porttitor. Morbi ac orci purus.
-                    Duis pretium, urna in ullamcorper rutrum, diam lectus aliquam nisl, vitae lacinia eros sem ut urna. Proin maximus, enim vel lobortis ultrices,
-                    lectus diam tincidunt purus, ac convallis justo velit ut ante.
-                </p>
-                <p>
-                    Aliquam risus urna, luctus eu rhoncus vitae, suscipit nec nibh. Ut hendrerit, est consectetur dapibus maximus, ipsum lacus sodales massa, et
-                    fringilla nibh erat eget purus. Sed condimentum semper lacus, sit amet pharetra augue. Aliquam sollicitudin in lectus sit amet placerat. Fusce
-                    sed purus mi. Fusce eget orci at lacus blandit convallis a eu augue. Proin at nulla lorem. Ut posuere, lectus eget condimentum hendrerit, mi
-                    ante maximus mauris, molestie bibendum mauris arcu nec eros. Nulla posuere tempor augue a blandit. Donec porttitor magna et lacinia volutpat.
-                    Maecenas accumsan tellus eget diam aliquet, non elementum enim convallis. Praesent porta in sem nec venenatis. Nam gravida egestas rhoncus.
-                    Pellentesque risus eros, eleifend dapibus urna quis, mattis imperdiet neque. Praesent eu congue sem.
-                </p>
-                <button class="button-privacy-policy-print not-to-print" onclick="window.print();">
-                    <i class="fas fa-print"></i> Print this page
-                </button>
+            <div class="contact">
+                <?php
+
+                session_start();
+
+                /* Session parameter uzenetek */
+                $_SESSION["SessionIsUserNotExistingMessage"] = "The supplied credentials are not part of my database, which means you are not registered!";
+                $_SESSION["SessionIsUserNameTakenMessage"] = "Your desired username is taken! Please choose another one!";
+                $_SESSION["SessionIsPasswordTakenMessage"] = "Please choose a stronger password!";
+                $_SESSION["SessionPasswordNotMatchMessage"] = "The values of the password and repeat password fields are not the same!";
+                $_SESSION["SessionIsEmailTakenMessage"] = "Your email address is already in use!";
+                $_SESSION["SessionIsRegisterNotSuccessfulMessage"] = "OOPS! Something happened!";
+                $_SESSION["SessionNotAllowedExtensionMessage"] = "The selected file has an unsupported file type!";
+                $_SESSION["SessionIsFileTooLargeMessage"] = "The selected file is too large!";
+                $_SESSION["SessionFileExistsWithSameNameMessage"] = "File exists with same name!";
+                $_SESSION["SessionIsElementNotPlacedIntoArrayMessage"] = "The selected file has not been placed into the array!";
+
+                if ($_SESSION["SessionIsUserExisting"] == true && $_SESSION["SessionIsUserNameTaken"] == true) {
+                    echo $_SESSION["SessionIsUserNameTakenMessage"] . "<br />";
+                }
+                if ($_SESSION["SessionIsPasswordTaken"] == true) {
+                    echo $_SESSION["SessionIsPasswordTakenMessage"] . "<br />";
+                }
+                if ($_SESSION["SessionPasswordNotMatch"] == true) {
+                    echo $_SESSION["SessionPasswordNotMatchMessage"] . "<br />";
+                }
+                if ($_SESSION["SessionIsEmailTaken"] == true) {
+                    echo $_SESSION["SessionIsEmailTakenMessage"] . "<br />";
+                }
+                if ($_SESSION["SessionIsRegisterSuccessful"] == false) {
+                    echo $_SESSION["SessionIsRegisterNotSuccessfulMessage"] . "<br />";
+                }
+                if ($_SESSION["SessionNotAllowedExtension"] == true) {
+                    echo $_SESSION["SessionNotAllowedExtensionMessage"] . "<br />";
+                }
+                if ($_SESSION["SessionIsFileTooLarge"] == true) {
+                    echo $_SESSION["SessionIsFileTooLargeMessage"];
+                }
+                if ($_SESSION["SessionFileExistsWithSameName"] == true) {
+                    $_SESSION["SessionFileExistsWithSameNameMessage"];
+                }
+                if ($_SESSION["SessionIsElementPlacedIntoArray"] == false) {
+                    echo $_SESSION["SessionIsElementNotPlacedIntoArrayMessage"];
+                }
+                ?>
+
+                <form action="../logic/login.php" method="post" class="form-login">
+                    <button name="form-login-button" class="form-login-button">
+                        <i class="fas fa-arrow-alt-circle-left"></i> Go back to login page
+                    </button>
+                </form>
             </div>
-            <div class="social-media-profiles not-to-print">
+            <div class="social-media-profiles">
                 <div class="social-media-profile">
                     <h3>Connect</h3>
                     <ul>
@@ -170,11 +187,11 @@
                     </ul>
                 </div>
             </div>
-            <footer class="footer-links not-to-print">
+            <footer class="footer-links">
                 <div class="footer-link">
                     <ul>
                         <li>
-                            <a href="privacy-policy.php" class="actual">
+                            <a href="privacy-policy.php">
                                 <i class="fas fa-user-secret"></i> Privacy Policy
                             </a>
                             <a href="cookie-policy.php">

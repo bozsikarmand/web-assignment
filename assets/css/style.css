@@ -915,3 +915,78 @@ input:focus:-ms-input-placeholder {
     box-sizing: border-box;
     font-size: 14px;
 }
+
+.usertable  {
+    border-collapse:collapse;
+    border-spacing:0;
+    width: 100%;
+}
+.usertable td{
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+    border-color:black;
+}
+.usertable th{
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+    border-color:black;
+}
+.usertable .usertable-column-name{
+    background-color:#000099;
+    color:#ffffff;
+    border-color:inherit;
+    text-align:left;
+    vertical-align:top
+}
+.usertable .usertable-title{
+    font-weight:bold;
+    background-color:#993300;
+    color:#ffffff;
+    border-color:inherit;
+    text-align:center;
+    vertical-align:top
+}
+.usertable .usertable-data{
+    background-color:#660099;
+    text-align:left;
+    vertical-align:top
+}
+@media screen and (max-width: 600px) {
+    .usertable {
+        width: auto !important;
+        margin: 50px;
+    }
+    .usertable col {
+        width: auto !important;
+    }
+    .usertable-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* For contact select style */
+
+#topics {
+    font-family: "Lora", sans-serif;
+    outline: 0;
+    background: #444;
+    color: #999999;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
